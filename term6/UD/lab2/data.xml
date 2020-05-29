@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE root
+        [
+                <!ELEMENT root (books, clients, workinghours)>
+                <!ELEMENT books (book+)>
+                <!ATTLIST book book_id CDATA #REQUIRED>
+                <!ELEMENT book (title, authors, genre, pages, year, language, available)>
+                <!ELEMENT title (#PCDATA)>
+                <!ELEMENT authors (author+)>
+                <!ELEMENT author (firstName, secondName, dateOfBirth)>
+                <!ELEMENT firstName (#PCDATA)>
+                <!ELEMENT secondName (#PCDATA)>
+                <!ELEMENT dateOfBirth (year, month, day)>
+                <!ELEMENT year (#PCDATA)>
+                <!ELEMENT month (#PCDATA)>
+                <!ELEMENT day (#PCDATA)>
+                <!ELEMENT genre (#PCDATA)>
+                <!ELEMENT pages (#PCDATA)>
+                <!ELEMENT language (#PCDATA)>
+                <!ELEMENT available (#PCDATA)>
+                <!ELEMENT clients (client+)>
+                <!ELEMENT client (firstName, secondName, dateOfBirth, address)>
+                <!ATTLIST client client_id CDATA #REQUIRED>
+                <!ELEMENT address (city, street, building, apartment)>
+                <!ELEMENT city (#PCDATA)>
+                <!ELEMENT street (#PCDATA)>
+                <!ELEMENT building (#PCDATA)>
+                <!ELEMENT apartment (#PCDATA)>
+                <!ELEMENT workinghours (hours+)>
+                <!ELEMENT hours (start, end)>
+                <!ATTLIST hours day CDATA #REQUIRED>
+                <!ELEMENT start (hour, minutes)>
+                <!ELEMENT hour (#PCDATA)>
+                <!ELEMENT minutes (#PCDATA)>
+                <!ELEMENT end (hour, minutes)>
+        ]
+>
+
+<root>
+    <books>
+        <book book_id="1000E01">
+            <title>Neural Networks and Learning Machines</title>
+            <authors>
+                <author>
+                    <firstName>Simon</firstName>
+                    <secondName>Haykin</secondName>
+                    <dateOfBirth>
+                        <year>1931</year>
+                        <month>1</month>
+                        <day>6</day>
+                    </dateOfBirth>
+                </author>
+            </authors>
+            <genre>Техническая литература</genre>
+            <pages>1103</pages>
+            <year>2006</year>
+            <language>Английский</language>
+            <available>3</available>
+        </book>
+        <book book_id="3000R01">
+            <title>Моби Дик</title>
+            <authors>
+                <author>
+                    <firstName>Герман</firstName>
+                    <secondName>Мелвилл</secondName>
+                    <dateOfBirth>
+                        <year>1819</year>
+                        <month>8</month>
+                        <day>1</day>
+                    </dateOfBirth>
+                </author>
+            </authors>
+            <genre>роман</genre>
+            <pages>544</pages>
+            <year>1851</year>
+            <language>русский</language>
+            <available>10</available>
+        </book>
+        <book book_id="2000R01">
+            <title>Математический анализ</title>
+            <authors>
+                <author>
+                    <firstName>Владимир</firstName>
+                    <secondName>Зорич</secondName>
+                    <dateOfBirth>
+                        <year>1937</year>
+                        <month>12</month>
+                        <day>16</day>
+                    </dateOfBirth>
+                </author>
+            </authors>
+            <genre>учебная литература</genre>
+            <pages>292</pages>
+            <year>1997</year>
+            <language>русский</language>
+            <available>3</available>
+        </book>
+    </books>
+    <clients>
+        <client client_id="1">
+            <firstName>Иван</firstName>
+            <secondName>Жданов</secondName>
+            <dateOfBirth>
+                <year>1985</year>
+                <month>6</month>
+                <day>5</day>
+            </dateOfBirth>
+            <address>
+                <city>Тотьма</city>
+                <street>Юрловский проезд</street>
+                <building>52</building>
+                <apartment>121</apartment>
+            </address>
+        </client>
+    </clients>
+    <workinghours>
+        <hours day="понедельник">
+            <start>
+                <hour>8</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>19</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+        <hours day="вторник">
+            <start>
+                <hour>9</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>19</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+        <hours day="среда">
+            <start>
+                <hour>8</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>19</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+        <hours day="четверг">
+            <start>
+                <hour>8</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>19</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+        <hours day="пятница">
+            <start>
+                <hour>8</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>16</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+        <hours day="суббота">
+            <start>
+                <hour>10</hour>
+                <minutes>00</minutes>
+            </start>
+            <end>
+                <hour>14</hour>
+                <minutes>00</minutes>
+            </end>
+        </hours>
+    </workinghours>
+</root>
